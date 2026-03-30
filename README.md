@@ -199,15 +199,17 @@ GET http://localhost:8080/api/orders/1
 
 ## Features Implemented
 
-* Reactive API Gateway (WebFlux)
-* JWT Authentication
-* Tenant-aware Rate Limiting (Redis)
-* Distributed Caching
-* Circuit Breaker + Retry (Resilience4j)
-* Usage Tracking Service
-* Billing Aggregation Service
-* Multi-container Docker Setup
-* Docker Compose orchestration
+- Reactive API gateway using Spring Cloud Gateway and WebFlux
+- JWT-secured request flow
+- Redis-backed tenant-aware rate limiting
+- Circuit breaker, retry, and fallback using Resilience4j
+- Usage tracking service
+- Billing aggregation service
+- Dockerized multi-service architecture
+- Docker Compose orchestration
+- CI pipeline using GitHub Actions
+- Docker image build automation in CI
+- Static code analysis using SonarCloud
 
 ---
 
@@ -225,11 +227,11 @@ GET http://localhost:8080/api/orders/1
 
 ## Future Enhancements
 
-* CI/CD pipeline (GitHub Actions)
-* SonarQube integration
-* Persistent storage for usage data
-* API documentation (Swagger/OpenAPI)
-* Multi-tenant billing plans
+- JUnit and Mockito test coverage across all services
+- Persistent database storage for usage and billing data
+- OpenAPI / Swagger documentation
+- Image publishing and deployment automation
+- Multi-plan billing rules and invoice generation
 
 ---
 
