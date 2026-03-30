@@ -39,3 +39,12 @@ jobs:
           docker build -t orders-service ./orders/orders
           docker build -t usage-service ./user-service/user-service
           docker build -t billing-service ./billing-service/billing-service
+
+      - name: SonarCloud Analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          mvn -B verify sonar:sonar \
+            -Dsonar.projectKey=varun200322_usage-aware-api-gateway-platform \
+            -Dsonar.organization=varun200322 \
+            -Dsonar.host.url=https://sonarcloud.io
