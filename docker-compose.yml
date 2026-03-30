@@ -1,0 +1,39 @@
+services:
+  redis:
+    image: redis:7
+    container_name: gateway-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  orders-service:
+    build:
+      context: ./orders/orders
+    container_name: orders-service
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+
+  user-service:
+    build:
+      context: ./user-service/user-service
+    container_name: user-service
+    ports:
+      - "8082:8082"
+    restart: unless-stopped
+
+  billing-service:
+    build:
+      context: ./billing-service/billing-service
+    container_name: billing-service
+    ports:
+      - "8083:8083"
+    restart: unless-stopped
+
+  gateway-service:
+    build:
+      context: ./gateway-service/gateway-service
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
