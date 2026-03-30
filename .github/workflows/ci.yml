@@ -25,7 +25,7 @@ jobs:
         run: mvn -f gateway-service/gateway-service/pom.xml clean package -DskipTests
 
       - name: Build orders-service
-        run: mvn -f orders-service/orders-service/pom.xml clean package -DskipTests
+        run: mvn -f orders/orders/pom.xml clean package -DskipTests
 
       - name: Build usage-service
         run: mvn -f user-service/user-service/pom.xml clean package -DskipTests
