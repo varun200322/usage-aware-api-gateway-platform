@@ -32,3 +32,10 @@ jobs:
 
       - name: Build billing-service
         run: mvn -f billing-service/billing-service/pom.xml clean package -DskipTests
+
+      - name: Build Docker images
+        run: |
+          docker build -t gateway-service ./gateway-service/gateway-service
+          docker build -t orders-service ./orders/orders-service
+          docker build -t usage-service ./user-service/user-service
+          docker build -t billing-service ./billing-service/billing-service
