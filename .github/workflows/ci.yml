@@ -36,6 +36,6 @@ jobs:
       - name: Build Docker images
         run: |
           docker build -t gateway-service ./gateway-service/gateway-service
-          docker build -t orders-service ./orders/orders-service
+          docker build -t orders-service ./orders/orders
           docker build -t usage-service ./user-service/user-service
           docker build -t billing-service ./billing-service/billing-service
