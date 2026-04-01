@@ -33,6 +33,10 @@ public class RouteConfig {
                                 )
                         )
                         .uri("http://orders-service:8081") //routing target
-                ).build();
+                )
+                .route("transactions-service", r -> r
+                .path("/api/transactions/**")
+                .uri("http://billing-service:8083"))
+                .build();
     }
 }

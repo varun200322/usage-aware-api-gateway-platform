@@ -39,3 +39,7 @@ resilience4j:
     instances:
       ordersCircuitBreaker:
         timeoutDuration: 2s
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
